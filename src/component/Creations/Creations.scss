@@ -1,0 +1,242 @@
+.Creations {
+  margin: 0 auto 96px;
+  max-width: 1158px;
+  padding: 0 24px;
+
+  @media only screen and (min-width: 750px) {
+    margin: 0 auto 84px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 750px) {
+      flex-direction: row;
+      flex-flow: row wrap;
+      & > * {
+        flex: 1 100%;
+      }
+    }
+
+    .content {
+      margin-bottom: 48px;
+      order: 1;
+
+      @media only screen and (min-width: 750px) {
+        flex: 1 0 0;
+        margin-bottom: 80px;
+      }
+
+      h3 {
+        max-width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+
+        @media only screen and (min-width: 750px) {
+          font-size: 48px;
+          line-height: 48px;
+          text-align: left;
+        }
+      }
+    }
+
+    .actions {
+      order: 3;
+      margin-top: 34px;
+      text-align: center;
+
+      @media only screen and (min-width: 750px) {
+        margin-top: 0;
+        order: 2;
+        flex: 1 0 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      button.primary {
+        cursor: pointer;
+        width: 157px;
+        height: 40px;
+        font-size: 14px;
+        font-family: var(--font-alata);
+        line-height: 14px;
+        text-transform: uppercase;
+
+        &:hover {
+          background: #000;
+          color: #fff;
+          border-style: none;
+        }
+      }
+    }
+
+    .grid {
+      order: 2;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 24px;
+      width: 100%;
+
+      @media only screen and (min-width: 750px) {
+        order: 3;
+        grid-template-columns: repeat(auto-fill, 255px);
+        row-gap: 30px;
+        justify-content: space-between;
+      }
+
+      .card {
+        cursor: pointer;
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        @media only screen and (min-width: 750px) {
+          width: 256px;
+          height: 450px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          opacity: 1;
+          background-size: cover;
+        }
+
+        &.deep-earth {
+          &::before {
+            background: url("../../images/mobile/image-deep-earth.jpg")
+              no-repeat center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-deep-earth.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.night-arcade {
+          &::before {
+            background: url("../../images/mobile/image-night-arcade.jpg")
+              no-repeat center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-night-arcade.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.soccer-team {
+          &::before {
+            background: url("../../images/mobile/image-soccer-team.jpg")
+              no-repeat center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-soccer-team.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.the-grid {
+          &::before {
+            background: url("../../images/mobile/image-grid.jpg") no-repeat
+              center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-grid.jpg") no-repeat
+                center center;
+            }
+          }
+        }
+
+        &.from-up {
+          &::before {
+            background: url("../../images/mobile/image-from-above.jpg")
+              no-repeat center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-from-above.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.pocket-borealis {
+          &::before {
+            background: url("../../images/mobile/image-pocket-borealis.jpg")
+              no-repeat center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-pocket-borealis.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.the-curiosity {
+          &::before {
+            background: url("../../images/mobile/image-curiosity.jpg") no-repeat
+              center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-curiosity.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        &.make-fisheye {
+          &::before {
+            background: url("../../images/mobile/image-fisheye.jpg") no-repeat
+              center center;
+
+            @media only screen and (min-width: 750px) {
+              background: url("../../images/desktop/image-fisheye.jpg")
+                no-repeat center center;
+            }
+          }
+        }
+
+        h4.card-title {
+          position: relative;
+          max-width: 145px;
+          padding: 0 0 20px 20px;
+          font-size: 24px;
+          line-height: 24px;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-bottom: 0;
+
+          @media only screen and (min-width: 750px) {
+            max-width: 205px;
+            font-size: 32px;
+            line-height: 32px;
+            padding: 0 0 32px 40px;
+          }
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0.3;
+          }
+
+          h4.card-title {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

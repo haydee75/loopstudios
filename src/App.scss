@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  --light-grey-color: #f2f2f2;
+  --white-color: #fff;
+  --black-color: #303030;
+  --grey-color: #808397;
+  --dark-bg: rgba(0, 0, 0, 0.75);
+  --font-alata: "Alata", sans-serif;
+  --font-josefin: "Josefin Sans", sans-serif;
+}
+
+body {
+  background: var(--light-grey-color);
+  font-family: var(--font-josefin);
+
+  .App {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+
+    h2 {
+      font-family: var(--font-josefin);
+      font-size: 40px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: var(--white-color);
+
+      @media only screen and (min-width: 750px) {
+        font-size: 72px;
+        line-height: 70px;
+        font-weight: 300;
+      }
+    }
+
+    h3 {
+      font-family: var(--font-josefin);
+      font-weight: 900;
+      margin-bottom: 24px;
+      max-width: 350px;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: -0.228571px;
+
+      @media only screen and (min-width: 700px) {
+        margin-bottom: 32px;
+        font-size: 40px;
+        line-height: 49px;
+        letter-spacing: -0.285714px;
+      }
+    }
+
+    h4 {
+      font-family: var(--font-josefin);
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 35px;
+      letter-spacing: -0.2px;
+      color: #24554a;
+      margin-bottom: 27px;
+    }
+
+    p {
+      font-family: var(--font-alata);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: -0.128571px;
+      color: #808397;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: initial;
+
+      &.link.secondary {
+        position: relative;
+        font-family: var(--font-josefin);
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24303e;
+
+        &:after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 10px;
+          background: #fef2b9;
+          left: 0;
+          bottom: 0;
+          border-radius: 25px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
